@@ -1,0 +1,356 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;  
+}
+body
+{
+    font-family: "Dancing Script", cursive;
+    background-color: #C7C8CC;
+}
+.header {
+    position: fixed;
+    width: 100%;
+    padding: 20px 200px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 250px;
+}
+
+.nav {
+    background-color: rgb(48, 46, 46);
+    border-radius: 26px;
+    padding: 10px;
+    height: 50px;
+}
+
+.nav a {
+    position: relative;
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.nav a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: .3s;
+}
+
+.nav a:hover::before {
+    width: 100%;
+}
+.menu-content a
+{
+    text-decoration: none;
+    color: black;
+}
+.menu-container .menu-content div
+{
+    border: solid black;
+    background-color: #E3E1D9;
+    border-radius:20px 50px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    width: 30%;
+    font-size: 80px;
+    text-align: center;
+    margin-left: 20px;
+}
+.menu-container .menu-content {
+padding-top: 50px;
+display: block;
+}
+.sucre-container
+{
+    background-image: url("../media/sucre.jpg");
+    background-size: 300px;
+    transition: 0.3s;
+}
+.boisson-container
+{
+    background-image: url("../media/drinks.jpg");
+    background-size: 300px;
+    transition: 0.3s;
+}
+.boisson-container:hover,.sale-container:hover,.sucre-container:hover
+{
+    transform: translateY(-20px);
+    transition: 0.3s;
+}
+.sale-container
+{
+    background-image: url("../media/salty.jpeg");
+    background-size: 300px;
+    transition: 0.3s;
+}
+.menu
+{
+    padding-top: 50px;
+    padding-bottom: 200px;
+    background-image: url("../media/pngegg.png");
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.menu-title
+{
+    margin: 100px;
+    text-align: left;
+    font-size:90px ;
+    font-weight: 900;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    color:white;
+    font-size: 40px;
+}
+th, td {
+    border: none;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    border-bottom: 5px solid white;
+}
+table button
+{
+padding: 10px;
+border-radius: 10px;
+cursor: pointer;
+}
+.menu-details-container
+{
+    background-image: url("../media/chalk.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:60%;
+    padding: 300px;
+    padding-bottom: 300px;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu-details-container h2
+{
+    color: #E3E1D9;
+    font-weight: 900;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.description {
+    flex: 1;
+    background-color: #ffcc00;
+    color: #fff;
+    padding: 20px;
+    text-align: justify;
+}
+
+.image {
+    flex: 1;
+    background-image: url('kalb-el-louz-chamia.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.image-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.image-content button {
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.image-content button:hover {
+    background-color: #f9b700;
+}
+.menu-boisson , .menu-sucre , .menu-sale
+{
+    padding: 100px;
+}
+.boisson-menu
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.boisson-description 
+{
+display: flex;
+flex-direction: column;
+
+}
+.boisson-description p
+{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.boisson-description h1
+{
+    font-size: 80px;
+    margin-bottom: 50px;
+}
+.boisson-image img
+{
+    height: 100%;
+    width: 400px;
+    margin-right: 150px;
+    margin-left: 100px;
+}
+.menu-button button
+{
+background-color: #37383c;
+color: #C7C8CC;
+border-radius: 10px;
+font-size: 20px;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 30px;
+padding-right: 30px;
+cursor: pointer;
+margin: 20px;
+}
+.menu-details {
+    height: 0; 
+    overflow: hidden; 
+    transition: height 0.5s ease; 
+    opacity: 0; 
+}
+
+.menu-details.visible {
+    height: auto; 
+    opacity: 1; 
+}
+.divider
+{
+    display: flex;
+    justify-content: center;
+}
+.divider img
+{
+    width: 80%;
+    margin: 30px;
+
+}
+.main-footer {
+    padding: 70px 0;
+    display: flex;
+    justify-content: space-evenly;
+    background-color:rgb(124, 121, 121);
+  }
+  
+  .main-footer h1 {
+    font-size: 40px;
+    line-height: 117%;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  
+  .main-footer h2 {
+    font-size: 50px;
+    font-weight: 500;
+  }
+  .main-footer img
+  {
+    width: 300px;
+  }
+  .main-footer ul li a {
+    color: #ffffffcc;
+    text-decoration:none;
+    font-size: 20px;
+  }
+  
+  .footer-bar {
+    background-color:#ffa629;
+    font-size: 17px;
+    padding: 15px 5px;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  footer a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  .logoinfo p {
+    color: #6EB981;
+    font-size: 17px;
+    margin-top: 5px;
+  }
+  .contact-details li {
+    list-style: none;
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  .contact-details li a {
+    text-decoration:none;
+    color: #f1f1f1;
+    font-size: 25px;
+  }
+  
+  .contact-details .fa {
+    color: #f1f1f1;
+    margin-right: 10px;
+  }
+  
+  .com ul li{
+    padding:5px 0;
+    color: #f1f1f1;
+    font-size: 25px;
+  }
+  .social-icons
+  {
+    display: flex;
+    flex-direction: row;
+  }
+  .social-icons img
+  {
+    width:30px;
+    border-radius: 20px;
+    margin-right: 10px;
+  }
